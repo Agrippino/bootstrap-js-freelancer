@@ -98,7 +98,7 @@
                 <div class="col text-center">
                     <h4>WANT AN OFFER?</h4>
                 </div>
-            <form class="row col px-5">
+            <form class="row col px-5" onsubmit="pressioneBottone(event)">
                 <div class="col-6 ">
                   <label for="firstname" class="form-label">First name</label>
                   <input type="text" class="form-control" id="firstname" placeholder="First name">
@@ -112,15 +112,15 @@
                     <input type="email" class="form-control" id="inputEmail4" placeholder="Inserisci una email">
                 </div>
                 <div class="col-6">
-                  <label for="oreRichieste" class="form-label">Hours requested</label>
-                  <input type="text" class="form-control" id="oreRichieste" placeholder="Inserisci un numero">
+                  <label for="oreLavoroRichieste" class="form-label">Hours requested</label>
+                  <input type="number" class="form-control" id="oreLavoroRichieste" placeholder="Inserisci un numero">
                 </div>
                 <div class="col-6">
                     <label for="tipoDiLavoro" class="form-label">Type of work</label>
-                    <select id="tipoDiLavoro" class="form-select">
-                      <option selected>Backed Development</option>
-                      <option>Frontend Development</option>
-                      <option>Project Analisys</option>
+                    <select id="tipoDiLavoro" class="form-select" >
+                      <option value="BD">Backed Development</option>
+                      <option  value="FD">Frontend Development</option>
+                      <option  value="PA">Project Analisys</option>
                     </select>
                 </div>
                 <div class="col-6">
@@ -134,7 +134,7 @@
                     <label for="floatingTextarea">inserisci qui il tuo messaggio</label>
                   </div>
                 <div class="col-12 text-center mt-3">
-                  <button type="submit" class="btn btn-warning">send</button>
+                  <button type="submit" class="btn btn-warning " >send</button>
                 </div>
               </form>
         </div>
@@ -157,14 +157,7 @@
 
     <!-- Optional JavaScript; choose one of the two! -->
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha484-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha484-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj4iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha484-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
   
