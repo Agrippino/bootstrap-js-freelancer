@@ -1,7 +1,12 @@
 function pressioneBottone(event) {
     event.preventDefault();
     let oreDiLavoro =parseInt(document.getElementById("oreLavoroRichieste").value);
-    calcoloOre(oreDiLavoro);
+    let costoSenzaSconto=calcoloOre(oreDiLavoro);
+    console.log(costoSenzaSconto)
+    let risultatoSconto=controlloSconto(costoSenzaSconto);
+    console.log(risultatoSconto)
+    document.getElementById("demo").innerHTML = costoSenzaSconto;
+
 }
 function calcoloOre(oreDiLavoro) {
     
@@ -23,29 +28,38 @@ function calcoloOre(oreDiLavoro) {
     else if (sceltaLavoro=="PA") {
         calcoloOrediLavoro= oreDiLavoro * 33.6;
         console.log("il costo del lavoro selezione per ora è: " + calcoloOrediLavoro );
-        
-  }
-}
+}    return(calcoloOrediLavoro);
+}    
 
-
-let codiceSconto = document.getElementById("codiceSconto").value;
-let codiceScontoAccettato = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"]
-let verificaSconto;
-let variabileZero = false;
-//ciclo for per confronto con il server
-for (let i=0; i < codiceScontoAccettato.length;i++){
-    if(codiceScontoAccettato[i]!==codiceSconto){  
+let codiceScontoAccettato = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
+function controlloSconto(costo1) {
+    let codiceSconto = document.getElementById("codiceSconto").value;
+    let verificaSconto = false;
+    let calcoloConSconto= (costo1);
+    for (let i=0; i < codiceScontoAccettato.length;i++){
+    if(codiceScontoAccettato[i]==codiceSconto){  
+        calcoloConSconto= costo1*0.25;
+        calcoloConSconto= costo1 - calcoloConSconto;
+        console.log(calcoloConSconto)
         console.log("codice sconto presente: " + codiceScontoAccettato);
-        variabileZero==true
+        verificaSconto==true
     }
-    else {
-        variabileZero = false
-    alert(emailRisultato="Codice sconto non utilizzabile");
-    break;
-    }
+    else if
+        (codiceScontoAccettato[i]!=codiceSconto){
+        verificaSconto = false
+        codiceSconto=("Codice sconto non utilizzabile");
+        }
+    } return(calcoloConSconto);
 }
-function calcoloConSconto
-/*if (variabileZero == 0){
+
+
+
+
+
+//ciclo for per confronto con il server
+
+
+/*if (verificaSconto == 0){
     alert(verificaSconto= "Codice sconto non utilizzabile");
 }
 
