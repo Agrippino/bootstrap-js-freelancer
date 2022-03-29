@@ -12,8 +12,8 @@
   </head>
   <body>
     <header>
-        <div class="portafolio e contatti">
-            <div class="row justify-content-md-center">
+        <div id="portafolio e contatti">
+            <div class="row justify-content-md-center  bg-info">
               <div class="col-6 text-left">
                 Portfolio
               </div>
@@ -21,26 +21,26 @@
                 CONTACT ME
               </div>
               <div class="row justify-content-md-center">     
-              <div class="col-md-auto">
-              <img src="img\undraw_profile_pic_ic5t.svg" class="rounded mx-auto d-block img-fluid" alt="imamgine omino">
+              <div class="col-12">
+              <img src="img\undraw_profile_pic_ic5t.svg" class="rounded mx-auto d-block img-fluid" style="width: 18rem" alt="imamgine omino">
               </div>
-              <div class="col text text-center">
+              <div class="col-12text text-center">
                 <h1>Pinco Pallo</h1>
               </div>
-              <div class="col text-center">
+              <div class="col-12 text-center">
                 <h4>WEB DESIGNER</h4>
               </div>  
             </div>
         </div>
     </header>
     <main>
-        <div class="Lavori svolti">
-            <div class="row justify-content-md-center">
+        <div id="Lavori svolti">
+            <div class="row justify-content-md-center bg-danger">
               <div class="col text-center">
                 <h4>PORTFOLOIO</h4>
               </div>
               <div class="row justify-content-md-center">     
-                <div class="card col-4 mb-5 me-4 " style="width: 18rem;">
+                <div class="card col-4 mb-5 me-4  " style="width: 18rem;">
                     <img src="img\portfolio\cabin.png" class="card-img-top" alt="Casa in legno">
                     <div class="card-body">
                       <h5 class="card-title">Cabin Website</h5>
@@ -91,17 +91,20 @@
                   </div>
             </div>
         </div>
-        <div class="Ricevi offerta">
-            <form class="row justify-content-md-center">
+            </div>
+            </div>
+        <div class="Ricevi offerta bg-info">
+            <div calss="row">
                 <div class="col text-center">
                     <h4>WANT AN OFFER?</h4>
-            <form class="row">
-                <div class="col-md-6">
+                </div>
+            <form class="row col px-5">
+                <div class="col-6 ">
                   <label for="firstname" class="form-label">First name</label>
                   <input type="text" class="form-control" id="firstname" placeholder="First name">
                 </div>
-                <div class="col-md-6">
-                  <label for="lastname" class="form-label">Password</label>
+                <div class="col-6">
+                  <label for="lastname" class="form-label">Last name</label>
                   <input type="text" class="form-control" id="lastname" placeholder="Last name">
                 </div>
                 <div class="col-6">
@@ -112,27 +115,44 @@
                   <label for="oreRichieste" class="form-label">Hours requested</label>
                   <input type="text" class="form-control" id="oreRichieste" placeholder="Inserisci un numero">
                 </div>
-                <div class="col-md-6">
+                <div class="col-6">
                     <label for="tipoDiLavoro" class="form-label">Type of work</label>
                     <select id="tipoDiLavoro" class="form-select">
                       <option selected>Backed Development</option>
                       <option>Frontend Development</option>
                       <option>Project Analisys</option>
                     </select>
-                <div class="col-md-6">
+                </div>
+                <div class="col-6">
                   <label for="codiceSconto" class="form-label">Discount code</label>
                   <input type="text" class="form-control" id="codiceSconto"  placeholder="Inserisci sconto">
                 </div>
                 </div>
-                <div class="col form-floating">
-                    <textarea class="form-control" placeholder="Lascia qui un messaggio" id="areaCommenti"></textarea>
-                    <label for="areaCommenti">Message</label>
+                <label class="mt-2 mb-2 ms-5">Message</label>
+                <div class="form-floating ms-5 pe-5">                    
+                    <textarea class="form-control" placeholder="Lascia qui un messaggio" id="floatingTextarea"></textarea>
+                    <label for="floatingTextarea">inserisci qui il tuo messaggio</label>
                   </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Sign in</button>
+                <div class="col-12 text-center mt-3">
+                  <button type="submit" class="btn btn-warning">send</button>
                 </div>
               </form>
         </div>
+        <footer>
+            <div class="footer bg-danger">
+            <figure class="text-center">
+                <blockquote class="blockquote">
+                  <p>Location</p>
+                </blockquote>
+                <figcaption class="blockquote">
+                  2215 John Daniel Drive 
+                  <p> Clark,MO 65243</p> 
+                  <span title="Source Title">Copyright &copy; Your Website 2021</span>
+                </figcaption>
+              </figure>
+            </div>
+        </footer>
+            
     </main>
 
     <!-- Optional JavaScript; choose one of the two! -->
