@@ -2,10 +2,9 @@ function pressioneBottone(event) {
     event.preventDefault();
     let oreDiLavoro =parseInt(document.getElementById("oreLavoroRichieste").value);
     let costoSenzaSconto=calcoloOre(oreDiLavoro);
-    console.log(costoSenzaSconto)
+    console.log(costoSenzaSconto);
     let risultatoSconto=controlloSconto(costoSenzaSconto);
-    console.log(risultatoSconto)
-    document.getElementById("demo").innerHTML = costoSenzaSconto;
+    console.log(risultatoSconto);
 
 }
 function calcoloOre(oreDiLavoro) {
@@ -30,7 +29,7 @@ function calcoloOre(oreDiLavoro) {
         console.log("il costo del lavoro selezione per ora è: " + calcoloOrediLavoro );
 }    return(calcoloOrediLavoro);
 }    
-
+let risutlato;
 let codiceScontoAccettato = ["YHDNU32", "JANJC63", "PWKCN25", "SJDPO96", "POCIE24"];
 function controlloSconto(costo1) {
     let codiceSconto = document.getElementById("codiceSconto").value;
@@ -42,26 +41,12 @@ function controlloSconto(costo1) {
         calcoloConSconto= costo1 - calcoloConSconto;
         console.log(calcoloConSconto)
         console.log("codice sconto presente: " + codiceScontoAccettato);
-        verificaSconto==true
+        verificaSconto=true;
     }
     else if
         (codiceScontoAccettato[i]!=codiceSconto){
-        verificaSconto = false
+        verificaSconto = false;
         codiceSconto=("Codice sconto non utilizzabile");
         }
     } return(calcoloConSconto);
 }
-
-
-
-
-
-//ciclo for per confronto con il server
-
-
-/*if (verificaSconto == 0){
-    alert(verificaSconto= "Codice sconto non utilizzabile");
-}
-
-//reminder fisso in pagina
-document.getElementById("demo").innerHTML = emailRisultato;*/
